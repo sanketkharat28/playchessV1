@@ -1,50 +1,45 @@
 import { WebSocket } from "ws";
 import { INIT_GAME, MOVE } from "./messages.js";
-import {Game} from "./Game.js"
-
+import { Game } from "./Game.js";
 export class Gamemanager {
-    private games: Game[];
-    private pendingUser: WebSocket | null;
-    private users:WebSocket[];
-    
+    games;
+    pendingUser;
+    users;
     constructor() {
         this.games = [];
         this.pendingUser = null;
         this.users = [];
     }
-
-    addUser(socket:WebSocket) {
+    addUser(socket) {
         this.users.push(socket);
-        this.addHandler(socket)
+        this.addHandler(socket);
     }
-
-    removeUser(socket:WebSocket) {
+    removeUser(socket) {
         this.users = this.users.filter(user => user !== socket);
         //stop the game here because the user left
     }
-
-    private addHandler(socket:WebSocket) {
-        socket.on("message", (data)=> {
+    addHandler(socket) {
+        socket.on("message", (data) => {
             const message = JSON.parse(data.toString());
-
-            if(message.type === INIT_GAME) {
-                if(this.pendingUser) {
+            if (message.type === INIT_GAME) {
+                if (this.pendingUser) {
                     const game = new Game(this.pendingUser, socket);
                     this.games.push(game);
                     this.pendingUser = null;
-                } else {
+                }
+                else {
                     this.pendingUser = socket;
                 }
             }
-
-            if(message.type === MOVE) {
+            if (message.type === MOVE) {
                 console.log("inside move");
-                const game = this.games.find(game=> game.player1 === socket || game.player2 === socket);
-                if(game) {
-                    console.log("inside makemove")
-                    game.makeMove(socket, message.move)
+                const game = this.games.find(game => game.player1 === socket || game.player2 === socket);
+                if (game) {
+                    console.log("inside makemove");
+                    game.makeMove(socket, message.move);
                 }
             }
-        })
+        });
     }
 }
+//# sourceMappingURL=Gamemanager.js.map

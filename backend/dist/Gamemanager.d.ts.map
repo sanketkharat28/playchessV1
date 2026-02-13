@@ -1,0 +1,1 @@
+{"version":3,"file":"Gamemanager.d.ts","sourceRoot":"","sources":["../src/Gamemanager.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,IAAI,CAAC;AAI/B,qBAAa,WAAW;IACpB,OAAO,CAAC,KAAK,CAAS;IACtB,OAAO,CAAC,WAAW,CAAmB;IACtC,OAAO,CAAC,KAAK,CAAa;;IAQ1B,OAAO,CAAC,MAAM,EAAC,SAAS;IAKxB,UAAU,CAAC,MAAM,EAAC,SAAS;IAK3B,OAAO,CAAC,UAAU;CAwBrB"}
