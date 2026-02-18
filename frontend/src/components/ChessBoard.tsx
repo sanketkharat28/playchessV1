@@ -52,7 +52,8 @@ export const ChessBoard = ({chess, setBoard, board, socket}: {
                 className={`w-16 h-16 ${(i+j)% 2 === 0 ? 'bg-green-500' : 'bg-white'}`}>
                 <div className="w-full justify-center flex h-full">
                     <div className="h-full justify-center flex flex-col">
-                    {square ? square.type : ""}
+                    {square ? <img className="w-14" src={`/${square.color}${square.type.toLowerCase()}.png`}
+                        alt="" /> : null}
                     </div>
                 </div>
               </div>
