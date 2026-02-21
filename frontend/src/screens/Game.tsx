@@ -54,6 +54,52 @@ export const Game = () => {
                         }))
                             }}>Play
                     </Button>}
+                    {/* How to play section */}
+              <div className="text-white pt-10">
+                <h2 className="text-xl font-bold mb-2 text-center">
+                  How to Start the Game
+                </h2>
+                <ul className="text-sm text-slate-300 space-y-2 list-disc list-inside">
+                  <li>
+                    first copy the url of this page and send it to your friend
+                    and tell him to open that link on his pc/mobile
+                  </li>
+                  <li>
+                    Now you click on the <strong>Play</strong> Button
+                  </li>
+                  <li>
+                    Now tell your friend to click on the <strong>Play</strong>{" "}
+                    button from his pc/mobile
+                  </li>
+                  <li>
+                    You will see the <strong>Play</strong> button vanished from
+                    both sides, so now the game has started
+                  </li>
+                  <li>
+                    if you shared the link then you are white and your friend is
+                    black
+                  </li>
+                </ul>
+              </div>
+              <div className="text-white pt-10">
+                <h2 className="text-xl font-bold mb-2 text-center">
+                  How to move the pieces
+                </h2>
+                <ul className="text-sm text-slate-300 space-y-2 list-disc list-inside">
+                  <li>
+                    Click on the piece you want to move and then click on the
+                    square where you want it move
+                  </li>
+                  <li>
+                    So first click is piece selection and second click is
+                    selecting the square where you want to move the piece
+                  </li>
+                  <li>
+                    on second click if you chose the square where the piece is
+                    unable to go (invalid move) the piece wont move
+                  </li>
+                </ul>
+              </div>
                     </div>
                 </div>
                </div>
