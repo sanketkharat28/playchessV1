@@ -37,7 +37,7 @@ export const Game = () => {
                     break;
             }
         }
-    },[socket, chess])
+    },[socket])
 
     if(!socket) return <div>Connecting...</div>
     return <div className="justify-center flex">

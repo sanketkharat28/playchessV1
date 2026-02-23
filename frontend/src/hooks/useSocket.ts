@@ -15,12 +15,15 @@ export const useSocket = () => {
             console.log("disconnected");
             setSocket(null);
         }
+        
+        ws.onerror = (err) => {
+            console.error("⚠️ WebSocket error", err);
+        };
 
         return ()=> {
             ws.close();
-        }
-
-    },[])
+        };
+    },[]);
 
     return socket;
 }
