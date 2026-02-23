@@ -79,6 +79,9 @@ export const Game = () => {
                     if you shared the link then you are white and your friend is
                     black
                   </li>
+                  <li>
+                    Remember white will play the first move after the play button vanishes from the both sides
+                  </li>
                 </ul>
               </div>
               <div className="text-white pt-10">
